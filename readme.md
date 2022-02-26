@@ -1,11 +1,8 @@
-Hi, Welcome to the repository for our CodeJam 2022 project! 
+#Save The Date
+Hi, Welcome to the repository for our CodeJam 2022 project! CodeJam 2022 is the first hackathon experience for most of our team, and we are very excited to present our product *Save The Date*.
 
-CodeJam 2022 is the first hackathon experience for most of our team, and we are very excited to present our product *Save The Date*.
-
-We have built and designed a fully functioning web app that allows students to upload their course syllabuses to a website that reads through the entire file while looking for important dates such as exams, presentations or assignments. Our website then creates spreadsheet containing all of the dates with the title of the work associated to it.
-The website also implements a Google Calendar API in order to automatically add the exam/assignment dates on a calender.
-
-In order to get the information from the course syllabus, we use the Amazon Textract API that can extract forms, tables, and plain text from .pdf files. Since our goal is to take note of submission and examination dates, we only extract data from tables.
+## About *Save The Date*
+There are two types of people at the beginning of the semester. There are those who tediously spend hours sifting through course outlines to write down all possible due dates, and there are those who go with the flow and don't glance at them. In one case you lose time, and in the other you can get caught off guard by an alarmingly close due date. Well, this is where *Save The Date* plays superhero. All the user has to do is drop their course outline pdf into the box, and a preview of all due dates will appear. However, the greatness doesn't stop here. *Save The Date* downloads all due dates directly into the user's calendar, making it so you never have to open that pesky course outline ever again.
 
 ### **INSPIRATION**
 Whether you are a student in high school, CEGEP or university, it is very important to stay up to date with all the assigned tasks. During those caffeine-intensive exam sessions, it can be very easy to forget about a seemingly meaningless assignment. To stay ahead of the workload, many students use agendas to write down important dates. While it is very beneficial to do so, many students avoid agendas because of the time it takes to write down all the dates and to keep up with everything. Our goal for this project was to make the use of a planner as efficient as possible by automating the process of writing down evaluation dates.
@@ -22,3 +19,6 @@ The first design challenge was to write our program so that it can read and unde
 The first major challenge we ran into during the development of our project was to match the data from the tables with the right assignments. Being able to keep the dates organized during all the intermediate steps was a very tedious task to make sure we extract the data that we want. To keep all the dates organized, we relied on the python script to get every date input and map it to the correct assignment and saving it.
 
 Another big challenge in the information gathering step was that many files don't display the assignment information in the form of a table. This made the search for the information very difficult since we needed to go through each line of the document which made the runtime much longer than it would be if the program was only looking in tables. To solve this issue, we decided that with the limited time we have, we are limiting the use of the program to syllabi with tables.
+
+### **WHAT'S NEXT FOR SAVE THE DATE**
+Our biggest priority for the future of our project is to make it read and export dates from all different formatting options. The
