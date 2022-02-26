@@ -1,4 +1,4 @@
-#Save The Date
+# Save The Date
 Hi, Welcome to the repository for our CodeJam 2022 project! CodeJam 2022 is the first hackathon experience for most of our team, and we are very excited to present our product *Save The Date*.
 
 ## About *Save The Date*
