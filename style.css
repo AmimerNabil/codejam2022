@@ -4,10 +4,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth; /* might be able to remove this */
 }
 body {
   min-height: 100vh;
-  background: linear-gradient(#2b1055, #7597de);
+  background: linear-gradient(#e19655, #7597de);
+  overflow-x: hidden;
 }
 header {
   position: absolute;
@@ -54,12 +56,77 @@ section {
   width: 100%;
   height: 100vh;
   padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /*this might be what changes the position of the text for "save the date"*/
 }
+/*
+this is to make the colour blend from bottom of page to header, but it is not working for some reason.
+section ::before {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to top, #e19655, transparent);
+  z-index: 10000;
+}
+*/
 section img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  pointer-events: none;
+}
+section img#clouds {
+  margin-left: -1320px;
+  z-index: 10;
+}
+section img#ground {
+  z-index: 2;
+}
+section img#bush {
+  z-index: 4;
+}
+#text {
+  position: absolute;
+  margin-bottom: 310px;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 1;
+}
+#btn {
+  margin-left: 1500px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #f2a061;
+  font-size: 1.5em;
+  z-index: 11;
+  transform: translateY(270px);
+}
+.sec {
+  position: relative;
+  padding: 50px;
+  background: #f2a061;
+}
+.sec h2 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.sec h4 {
+  font-size: 1.75em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.sec p {
+  font-size: 1.3em;
+  color: #fff;
 }
