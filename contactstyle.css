@@ -1,0 +1,106 @@
+@import url("https://fonts.googelapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth; /* might be able to remove this */
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(#e19655, #7597de);
+  overflow-x: hidden;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+header .logo {
+  color: #5a7499;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #5a7499;
+  border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active {
+  background: #5a7499;
+  color: #fff;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /*this might be what changes the position of the text for "save the date"*/
+}
+section h2 {
+  margin-bottom: 100px;
+}
+#text {
+  position: absolute;
+  color: #5a7499;
+  margin-top: 200px;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  padding: 50px;
+  margin-left: 50px;
+  background: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 7.5vh;
+  justify-content: space-evenly;
+  column-gap: 200px;
+}
+
+.container ul {
+  font-size: 0.5em;
+}
+
+.container img {
+  border-radius: 100px;
+  margin-top: 1.5%;
+}
+.container li {
+  color: #00478c;
+}
+
+#btn {
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 20px;
+  background: transparent;
+  color: #00478c;
+  font-size: 1em;
+  z-index: 11;
+}

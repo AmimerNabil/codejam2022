@@ -5,16 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Save The Date | Course Outline Due Date Retriever</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Images/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Images/apple-touch-icon.png"
+    />
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <header>
-      <a href="#" class="logo"> Logo</a>
+      <a href="#" class="logo"> S.T.D</a>
       <ul>
         <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#sec">About</a></li>
+        <li><a href="#">Upload</a></li>
+        <li><a href="Contact.html">Contacts</a></li>
       </ul>
     </header>
     <section>
@@ -23,12 +34,13 @@
       <img src="Images/Tree.png" id="Tree" />
       <!-- add the name of the id of the dropbox in front of the hashtag, so that the button works-->
       <img src="Images/Bush.png" id="bush" />
-      <img src="Images/cloudtrial6.png" id="clouds" />
-      <img src="Images/ground.png" alt="ground" />
+      <img src="Images/cloudtrial8.png" id="clouds" />
+      <img src="Images/cloudtrial7.png" id="clouds2" />
+      <img src="Images/ground.png" id="ground" />
       <h2 id="text">Save the Date</h2>
       <a href="#" id="btn"> Upload PDF</a>
     </section>
-    <div class="sec">
+    <div class="sec" id="sec">
       <h2>Save The Date</h2>
       <h4>Course Outline Due Date Retriever</h4>
       <p>
@@ -56,7 +68,8 @@
 
       window.addEventListener("scroll", function () {
         let value = window.scrollY;
-        clouds.style.left = value * 4.3 + "px";
+        clouds.style.left = value * 5.3 + "px";
+        clouds2.style.left = value * 4 + "px";
         text.style.bottom = value * 2 + "px";
         btn.style.marginRight = value * 2 + "px";
         header.style.top = value * 0.5 + "px";
