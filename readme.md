@@ -26,12 +26,19 @@ Another big challenge in the information gathering step was that many files don'
 
 The biggest challenge we faced in the development of our project was to write the code for the dropbox. We were able to create the dropbox and upload files into it, but writing the functionality for the dropbox was very difficult as we could not find a way to save the file into a folder that we could later access and read the information on the .pdf file.
 
+Some problems, however, we were not able to fix. Our website is not designed in a way for it to be user friendly on a mobile device. The tests we ran for the website were all on computer monitors.
+
 ### **ACCOMPLISHMENTS THAT WE'RE PROUD OF**
 We are proud that we were able to control our emotions and not break any monitors from the rage inducing failed codes.
 
 More seriously, the hardest moments of the project led to the greatest feelings of accomplishment once they were completed. The nine hours spent on the code for the dropbox were brutal, but through the hard work, we were able to understand how to get a .pdf file uploaded on our website with the help of a server (node.js).
 
 We also believe that the front-end work of our website was done very well. Our team member who took care of the front-end did not have any experience with web development, and still managed to design a very appealing page.
+
+## **WHAT WE LEARNED**
+For three of our team members, this hackathon was an introduction to competitive coding. We learned a great deal of things from front-end design ideas, to API implementations using authorization for a Google account.
+
+We also learned a lot about how to organize our tasks in a way that benefited the whole team. Going into the project, we had an idea of what had to be done. Before we started, we each gave ourselves a role, and we followed what we had to do. Thanks to the task division we were able to focus on one task at a time and complete everything in an efficient manner
 
 ### **WHAT'S NEXT FOR SAVE THE DATE**
 Our biggest priority for the future of our project is to make it read and export dates from all different formatting options. Eventually, we want to be able to read from any kind of file. We want to be able to share this application with the public and offer a real service. Eventually, we want to make our own calendar website without having to rely on Google Calendar and the API associated with it. 
