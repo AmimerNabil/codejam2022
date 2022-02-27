@@ -16,6 +16,8 @@ The development process for our web application was done in many simultaneous st
 ### **CHALLENGES WE RAN INTO**
 It's not a hackathon without challenges that make us want to quit...
 
+We did not have any major problems with the front-end part of our project. Except some minor formatting issues that left us puzzled for a couple minutes, we did not spend too long trying to fix any visual issues.
+
 The first design challenge was to write our program so that it can read and understand input from any kind of .pdf file layout. Some syllabi had additional information in their assignments/evaluations section. We adapted our code to only look for certain "trigger" words that allowed us to ignore the rest of the .pdf file.
 
 The first major challenge we ran into during the development of our project was to match the data from the tables with the right assignments. Being able to keep the dates organized during all the intermediate steps was a very tedious task to make sure we extract the data that we want. To keep all the dates organized, we relied on the python script to get every date input and map it to the correct assignment and saving it.
@@ -28,6 +30,8 @@ The biggest challenge we faced in the development of our project was to write th
 We are proud that we were able to control our emotions and not break any monitors from the rage inducing failed codes.
 
 More seriously, the hardest moments of the project led to the greatest feelings of accomplishment once they were completed. The nine hours spent on the code for the dropbox were brutal, but through the hard work, we were able to understand how to get a .pdf file uploaded on our website with the help of a server (node.js).
+
+We also believe that the front-end work of our website was done very well. Our team member who took care of the front-end did not have any experience with web development, and still managed to design a very appealing page.
 
 ### **WHAT'S NEXT FOR SAVE THE DATE**
 Our biggest priority for the future of our project is to make it read and export dates from all different formatting options. Eventually, we want to be able to read from any kind of file. We want to be able to share this application with the public and offer a real service. Eventually, we want to make our own calendar website without having to rely on Google Calendar and the API associated with it. 
