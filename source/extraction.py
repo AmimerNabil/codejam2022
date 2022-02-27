@@ -4,6 +4,7 @@ import tables
 import csv
 import csvExtraction
 import sys
+import insert
 
 from pdf2image.exceptions import (
     PDFInfoNotInstalledError,
@@ -12,6 +13,21 @@ from pdf2image.exceptions import (
 )
 
     
+mappings = {
+    ('january' , 'jan') : '01',
+    ('february', 'feb') : '02',
+    ('march', 'mar') : '03',
+    ('april', 'apr') : '04',
+    ('may', 'may') : '05',
+    ('june', 'jun') : '06',
+    ('july', 'jul') : '07',
+    ('august', 'aug') : '08',
+    ('september', 'sep') : '09',
+    ('october','oct') : '10',
+    ('november','nov') : '11',
+    ('december','dec') : '12'
+}
+
 
 def main(filePath , filename):
     print("this happened")
@@ -28,6 +44,20 @@ def main(filePath , filename):
         output = (csvExtraction.getDates("output" + str(page)))
         if len(output) != 0:
             dates.update(output)
+
+    
+    for item,date in dates.items():
+        words = date.split()
+        month = words[0]
+        day = words[1]
+        monthnum = -1
+
+        for idx, months in enumerate(mappings):
+            if month.lower() in months:
+                monthnum = idx + 1
+                break
+        
+        insert.main(filename + str("-")+item, day,monthnum)
 
     return dates
 

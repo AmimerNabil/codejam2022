@@ -77,8 +77,6 @@ async function getAllObjectsFromS3Bucket(bucket) {
             )         
         });
 
-
-
         isTruncated = response.IsTruncated
         if (isTruncated) {
             marker = response.Contents.slice(-1)[0].Key;
