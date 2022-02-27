@@ -123,3 +123,32 @@ section {
   font-size: 14px;
   text-align: center;
 }
+.submitbutton {
+  position: relative;
+  max-width: 30%;
+  height: 20%;
+  padding: 0.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  color: #5a7499;
+  border: 3px solid #00478c;
+  border-radius: 20px;
+}
+.submitbutton {
+  position: relative;
+  margin-left: auto;
+  margin-right: 10%;
+  margin-bottom: auto;
+  margin-top: -30%;
+  background: transparent;
+  display: flex;
+  font-size: 3vh;
+  z-index: 10;
+  background-color: #fff;
+}
