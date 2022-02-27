@@ -35,7 +35,7 @@ More seriously, the hardest moments of the project led to the greatest feelings 
 
 We also believe that the front-end work of our website was done very well. Our team member who took care of the front-end did not have any experience with web development, and still managed to design a very appealing page.
 
-## **WHAT WE LEARNED**
+### **WHAT WE LEARNED**
 For three of our team members, this hackathon was an introduction to competitive coding. We learned a great deal of things from front-end design ideas, to API implementations using authorization for a Google account.
 
 We also learned a lot about how to organize our tasks in a way that benefited the whole team. Going into the project, we had an idea of what had to be done. Before we started, we each gave ourselves a role, and we followed what we had to do. Thanks to the task division we were able to focus on one task at a time and complete everything in an efficient manner
