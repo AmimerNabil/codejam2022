@@ -19,7 +19,7 @@ def main(filePath):
     dates = {}
 
     for page, image in enumerate(images):
-        imagePath = "pythonScript/pdf_image/image_" + str(page) + ".png" 
+        imagePath = "pdf_image/image_" + str(page) + ".jpeg" 
         image.save(imagePath)
         csv = tables.main(imagePath , page)
         outputCSV.append(csv)

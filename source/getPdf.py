@@ -7,7 +7,7 @@ s3 = boto3.resource('s3')
 
 def main(BUCKET_NAME, KEY):
     try:
-        s3.Bucket(BUCKET_NAME).download_file(KEY, 'pythonScript/uploads/'+KEY)
+        s3.Bucket(BUCKET_NAME).download_file(KEY, 'uploads/'+KEY)
     except botocore.exceptions.ClientError as e:
         if e.response['Error']['Code'] == "404":
             print("The object does not exist.")

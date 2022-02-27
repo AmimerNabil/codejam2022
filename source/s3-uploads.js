@@ -49,7 +49,7 @@ async function getAllObjectsFromS3Bucket(bucket) {
             };
             
             let options = {
-                scriptPath : 'pythonScript/',
+                scriptPath : '',
                 args : [parameters.Bucket, parameters.Key]
             };
 
@@ -61,7 +61,19 @@ async function getAllObjectsFromS3Bucket(bucket) {
                     output = res;
                 }
             )
-      
+            let optionsExtract = {
+                scriptPath : '',
+                args : 'uploads/'+parameters.Key
+            };
+        
+            PythonShell.run(
+                'extraction.py',
+                optionsExtract,
+                (err,res) =>{
+                    if (err) throw err;
+                    console.log(res);
+                }
+            )         
         });
 
         isTruncated = response.IsTruncated
@@ -72,23 +84,6 @@ async function getAllObjectsFromS3Bucket(bucket) {
 }
 
 keys = getAllObjectsFromS3Bucket("codejam2022");
-function getDateFromBucket(keys){
-    keys.forEach(k =>{
-        let optionsExtract = {
-            scriptPath : 'pythonScript/',
-            args : 'pythonScript/uploads/'+k
-        };
-    
-        PythonShell.run(
-            'extraction.py',
-            optionsExtract,
-            (err,res) =>{
-                if (err) throw err;
-                console.log(res);
-            }
-        )            
-    });
-}
-getDateFromBucket(keys);
+
 
 app.listen(3001, () => console.log("app is listening..."));
