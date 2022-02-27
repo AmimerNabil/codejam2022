@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Save The Date | Upload</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="Dropbox.css" />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="Images/favicon-32x32.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="Images/apple-touch-icon.png"
+  />
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo"> S.T.D.</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#sec">About</a></li>
+      <li><a href="#" class="active">Upload</a></li>
+      <li><a href="Contact.html">Contacts</a></li>
+    </ul>
+  </header>
+  <section>
+    <img src="Images/contactbackground.jpg" id="uploadbackground" />
+    <!-- Photo Reference: "https://www.freepik.com/vectors/background">Background vector created by pikisuperstar - www.freepik.com</a>-->
+  </section>
+  <form action="upload.php" method="post" enctype="multipart/form-data">
+    <div class="drop-zone">
+      <span class="drop-zone__prompt">Drop file here or click to upload</span>
+      <input type="file" name="myFile" id="myFile" class="drop-zone__input" />
+    </div>
+    <input type="submit" value="Upload file" />
+  </form>
+
+  <script src="Dropbox.js"></script>
+</body>
