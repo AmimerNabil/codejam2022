@@ -1,6 +1,4 @@
-from pdf2image import convert_from_path, convert_from_bytes
-import boto3
-import time
+from pdf2image import convert_from_path
 from trp import Document
 import tables
 import csv
@@ -21,15 +19,13 @@ def main(filePath):
     dates = {}
 
     for page, image in enumerate(images):
-        imagePath = "pdf_image/image_" + str(page) + ".png" 
+        imagePath = "pythonScript/pdf_image/image_" + str(page) + ".png" 
         image.save(imagePath)
         csv = tables.main(imagePath , page)
         outputCSV.append(csv)
         output = (csvExtraction.getDates("output" + str(page)))
         if len(output) != 0:
             dates.update(output)
-
-    
 
     return dates
 

@@ -1,5 +1,6 @@
 import csv
 
+
 def getTables(csvreader):
     tables = []
     table = []
@@ -20,12 +21,13 @@ def getTables(csvreader):
 
 # print(getTables(csvreader)[1])
 
-#triggerwords
-triggerWords = ['oral','presentation','component' , 'deliverable', 'exam', 'assignment','portfolio', 'paper', 'test',
-                 'final', 'midterm', 'essay',
-                 'report', 'lab', 'workshop', 'webwork','topic' ,'quiz', 'presentation']
 
-#date
+# triggerwords
+triggerWords = ['oral', 'presentation', 'component', 'deliverable', 'exam', 'assignment', 'portfolio', 'paper', 'test',
+                'final', 'midterm', 'essay',
+                'report', 'lab', 'workshop', 'webwork', 'topic', 'quiz', 'presentation']
+
+# date
 months = [
     'january',
     'february',
@@ -56,6 +58,7 @@ monthsAbbr = [
     'dec'
 ]
 
+
 def getDates(filename):
     file = open(filename + '.csv')
     csvreader = csv.reader(file)
@@ -66,27 +69,25 @@ def getDates(filename):
             header = table[0]
             trigger = False
             triggerType = ""
-            triggerindex = -1
             for cidx, cells in enumerate(header):
                 words = cells.split()
                 for word in words:
                     if word.lower() in triggerWords:
                         trigger = True
                         triggerType = cells
-                        triggerindex = cidx
 
             if trigger:
                 d = []
-                for idx,row in enumerate(table[1:]):
+                for idx, row in enumerate(table[1:]):
                     for cells in row:
                         words = cells.split()
                         for word in words:
                             if (word.lower() in months) or (word.lower() in monthsAbbr):
                                 d.append(cells)
-                                
+
                     if len(d) != 0:
-                        key = triggerType + str(idx + 1) 
+                        key = triggerType + str(idx + 1)
                         dates[key] = d[-1]
-    
+
     file.close()
     return dates
