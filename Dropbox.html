@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Drag and Drop File Upload</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="Dropbox.css">
+</head>
+
+<body>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <div class="drop-zone">
+            <span class="drop-zone__prompt">Drop file here or click to upload</span>
+            <input type="file" name="myFile" id="myFile" class="drop-zone__input">
+        </div>
+        <input type="submit" value="Upload file">
+    </form>
+
+
+    <script src="Dropbox.js"></script>
+</body>
