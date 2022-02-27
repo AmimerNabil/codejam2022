@@ -1,0 +1,141 @@
+@import url("https://fonts.googelapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth; /* might be able to remove this */
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(#e19655, #7597de);
+  overflow-x: hidden;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+header .logo {
+  color: #5a7499;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 25;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active {
+  background: #fff;
+  color: #5a7499;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /*this might be what changes the position of the text for "save the date"*/
+}
+/*
+this is to make the colour blend from bottom of page to header, but it is not working for some reason.
+section ::before {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to top, #e19655, transparent);
+  z-index: 10000;
+}
+*/
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+section img#clouds {
+  margin-left: -95%;
+  z-index: 10;
+}
+section img#clouds2 {
+  margin-left: -130%;
+  z-index: 10;
+}
+section img#ground {
+  z-index: 2;
+}
+section img#bush {
+  z-index: 4;
+}
+p {
+  text-align: justify;
+}
+#text {
+  position: absolute;
+  margin-bottom: 350px;
+  margin-top: 350px;
+  color: #5a7499;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 1;
+}
+#btn {
+  margin-left: 140%;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #5a7499;
+  font-size: 1.5em;
+  z-index: 11;
+  transform: translateY(270px);
+}
+.sec {
+  position: relative;
+  padding: 50px;
+  background: #efae5e;
+}
+.sec h2 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.sec h4 {
+  font-size: 1.75em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.sec p {
+  font-size: 1.3em;
+  color: #fff;
+}
