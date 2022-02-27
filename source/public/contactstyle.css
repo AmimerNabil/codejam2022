@@ -59,8 +59,9 @@ section {
   justify-content: center;
   align-items: center; /*this might be what changes the position of the text for "save the date"*/
 }
-section h2 {
-  margin-bottom: 100px;
+section h2{
+  margin-bottom: 50px;
+  font-size: 2.0em;
 }
 #text {
   position: absolute;

@@ -1,18 +1,81 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Save The Date | Course Outline Due Date Retriever</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Images/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Images/apple-touch-icon.png"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <!--<a href="#" class="logo"> S.T.D.</a> -->
+      <img src="Images/STD logo.png" id="logo" height="100px" class="logo" />
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#sec">About</a></li>
+        <li><a href="Dropbox.html">Upload</a></li>
+        <li><a href="Contact.html">Contacts</a></li>
+      </ul>
+    </header>
+    <section>
+      <!--<img src="Images/4136084.jpg" alt="BoyRunning" /> -->
+      <img src="Images/NoTreeorBush.png" id="NoTreeorBush" />
+      <img src="Images/Tree.png" id="Tree" />
+      <!-- add the name of the id of the dropbox in front of the hashtag, so that the button works-->
+      <img src="Images/Bush.png" id="bush" />
+      <img src="Images/cloudtrial8.png" id="clouds" />
+      <img src="Images/cloudtrial7.png" id="clouds2" />
+      <img src="Images/ground.png" id="ground" />
+      <h2 id="text">Save the Date</h2>
+      <a href="Dropbox.html" id="btn"> Upload PDF</a>
+      <!--<a href="https://www.freepik.com/vectors/background">Background vector created by pikisuperstar - www.freepik.com</a>-->
+    </section>
+    <div class="sec" id="sec">
+      <h2>Save The Date</h2>
+      <h4>Course Outline Due Date Retriever</h4>
+      <p>
+        There are two types of people at the beginning of the semester. There
+        are those who tediously spend hours sifting through course outlines to
+        write down all possible due dates, and there are those who go with the
+        flow and don't glance at them. In one case you lose time, and in the
+        other you can get caught off guard by an alarmingly close due date.
+        Well, this is where <strong>Save The Date</strong> plays superhero. All
+        the user has to do is drop their course outline pdf into the box, and a
+        preview of all due dates will appear. However, the greatness doesn't
+        stop here. <strong>Save The Date</strong>
+        downloads all due dates directly into the user's calendar, making it so
+        you never have to open that pesky course outline ever again.
+      </p>
+    </div>
+    <script>
+      let NoTreeorBush = document.getElementById("NoTreeorBush");
+      let Tree = document.getElementById("Tree");
+      let clouds = document.getElementById("clouds");
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
+      let bush = document.getElementById("bush");
+      let header = document.querySelector("header");
 
-     <title>file upload</title>
- </head>
- <body>
-     <h1>file upload</h1>
-
-     <form action="/upload" method="POST" enctype="multipart/form-data">
-        <input type="file" name="avatar">
-        <button>submit</button>
-     </form> 
- </body>
- </html>
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        clouds.style.left = value * 5.3 + "px";
+        clouds2.style.left = value * 4 + "px";
+        text.style.bottom = value * 2 + "px";
+        btn.style.marginRight = value * 2 + "px";
+        header.style.top = value * 0.5 + "px";
+      });
+    </script>
+  </body>
+</html>

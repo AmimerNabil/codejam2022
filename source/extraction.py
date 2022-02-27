@@ -11,7 +11,9 @@ from pdf2image.exceptions import (
     PDFSyntaxError
 )
 
-def main(filePath):
+    
+
+def main(filePath , filename):
     print("this happened")
     outputCSV = []
     images = convert_from_path(filePath)
@@ -31,8 +33,9 @@ def main(filePath):
 
 
 if __name__ == "__main__":
-    file_name = sys.argv[1]
-    print(main(file_name))
+    file_path = sys.argv[1]
+    file_name = sys.argv[2]
+    main(file_path, file_name)
 
 
 

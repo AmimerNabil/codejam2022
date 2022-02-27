@@ -1,12 +1,11 @@
 const aws = require('aws-sdk');
 const express = require('express');
-const { appendFile } = require('fs');
 const multer = require('multer');
 const multerS3 = require('multer-s3');
 const uuid = require('uuid').v4;
 const path = require('path');
-const { spawn } = require('child_process')
-const {PythonShell} = require('python-shell')
+const {PythonShell} = require('python-shell');
+const { deflateSync } = require('zlib');
 
 
 
@@ -28,14 +27,15 @@ const upload = multer({
 });
 
 
-app.use(express.static('public'));
+app.use(express.static('public/'));
 app.post('/upload', upload.array('avatar'), (req,res) =>{
     console.log(res.json({status : 'OK', uploaded: req.files.length}));
+    getAllObjectsFromS3Bucket("codejam2022");
 });
 
 
 async function getAllObjectsFromS3Bucket(bucket) {
-    listKey = []
+    
     let isTruncated = true;
     let marker;
     while(isTruncated) {
@@ -63,7 +63,8 @@ async function getAllObjectsFromS3Bucket(bucket) {
             )
             let optionsExtract = {
                 scriptPath : '',
-                args : 'uploads/'+parameters.Key
+                args : ['uploads/'+parameters.Key,
+                        parameters.Key]
             };
         
             PythonShell.run(
@@ -76,6 +77,8 @@ async function getAllObjectsFromS3Bucket(bucket) {
             )         
         });
 
+
+
         isTruncated = response.IsTruncated
         if (isTruncated) {
             marker = response.Contents.slice(-1)[0].Key;
@@ -83,7 +86,7 @@ async function getAllObjectsFromS3Bucket(bucket) {
     }
 }
 
-keys = getAllObjectsFromS3Bucket("codejam2022");
+getAllObjectsFromS3Bucket("codejam2022");
 
 
 app.listen(3001, () => console.log("app is listening..."));
