@@ -1,5 +1,5 @@
 # Save The Date
-Hi, Welcome to the repository for our CodeJam 2022 project! CodeJam 2022 is the first hackathon experience for most of our team, and we are very excited to present our product *Save The Date*.
+Hi, Welcome to the repository for our CodeJam 2022 project! Code.Jam(XI) is the first hackathon experience for most of our team, and we are very excited to present our product *Save The Date*.
 
 ## About *Save The Date*
 There are two types of people at the beginning of the semester. There are those who tediously spend hours sifting through course outlines to write down all possible due dates, and there are those who go with the flow and don't glance at them. In one case you lose time, and in the other you can get caught off guard by an alarmingly close due date. Well, this is where *Save The Date* plays superhero. All the user has to do is drop their course outline pdf into the box, and a preview of all due dates will appear. However, the greatness doesn't stop here. *Save The Date* downloads all due dates directly into the user's calendar, making it so you never have to open that pesky course outline ever again.
@@ -15,11 +15,19 @@ The development process for our web application was done in many simultaneous st
 
 ### **CHALLENGES WE RAN INTO**
 It's not a hackathon without challenges that make us want to quit...
+
 The first design challenge was to write our program so that it can read and understand input from any kind of .pdf file layout. Some syllabi had additional information in their assignments/evaluations section. We adapted our code to only look for certain "trigger" words that allowed us to ignore the rest of the .pdf file.
 
 The first major challenge we ran into during the development of our project was to match the data from the tables with the right assignments. Being able to keep the dates organized during all the intermediate steps was a very tedious task to make sure we extract the data that we want. To keep all the dates organized, we relied on the python script to get every date input and map it to the correct assignment and saving it.
 
 Another big challenge in the information gathering step was that many files don't display the assignment information in the form of a table. This made the search for the information very difficult since we needed to go through each line of the document which made the runtime much longer than it would be if the program was only looking in tables. To solve this issue, we decided that with the limited time we have, we are limiting the use of the program to syllabi with tables.
+
+The biggest challenge we faced in the development of our project was to write the code for the dropbox. We were able to create the dropbox and upload files into it, but writing the functionality for the dropbox was very difficult as we could not find a way to save the file into a folder that we could later access and read the information on the .pdf file.
+
+### **ACCOMPLISHMENTS THAT WE'RE PROUD OF**
+We are proud that we were able to control our emotions and not break any monitors from the rage inducing failed codes.
+
+More seriously, the hardest moments of the project led to the greatest feelings of accomplishment once they were completed. The nine hours spent on the code for the dropbox were brutal, but through the hard work, we were able to understand how to get a .pdf file uploaded on our website with the help of a server (node.js).
 
 ### **WHAT'S NEXT FOR SAVE THE DATE**
 Our biggest priority for the future of our project is to make it read and export dates from all different formatting options. Eventually, we want to be able to read from any kind of file. We want to be able to share this application with the public and offer a real service. Eventually, we want to make our own calendar website without having to rely on Google Calendar and the API associated with it. 
