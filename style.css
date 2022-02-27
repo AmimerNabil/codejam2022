@@ -29,6 +29,7 @@ header .logo {
   font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 2px;
+  z-index: 25;
 }
 
 header ul {

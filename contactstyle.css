@@ -80,7 +80,7 @@ section h2 {
   flex-wrap: wrap;
   font-size: 7.5vh;
   justify-content: space-evenly;
-  column-gap: 200px;
+  column-gap: 100px;
 }
 
 .container ul {
