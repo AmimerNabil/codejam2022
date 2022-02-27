@@ -1,0 +1,3 @@
+[console_scripts]
+camelot = camelot.cli:cli
+

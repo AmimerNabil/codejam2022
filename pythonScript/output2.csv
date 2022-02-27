@@ -1,0 +1,29 @@
+Table: Table_1
+
+3 List of Topics ,
+Boolean logic ,
+Variables and functions ,
+Boolean algebra ,
+Logic gates ,
+Number representations ,
+Binary numbers ,
+Signed binary numbers: 1's complement, 2's complement, and sign-magnitude representations ,
+Introduction to VHDL ,
+Combinational circuits ,
+Two-level circuits: sum-of-products and product-of-sums ,
+NAND and NOR logic networks ,
+Optimized implementation: Karnaugh maps ,
+Multilevel synthesis ,
+Combinational circuits building blocks ,
+Arithmetic circuits: adders and multipliers ,
+Multiplexers, encoders, and decoders ,
+Sequential circuits ,
+Latches and Flip-Flops ,
+Registers and counters ,
+Synchronous sequential circuits ,
+Finite state machines: design and optimization ,
+
+
+
+
+

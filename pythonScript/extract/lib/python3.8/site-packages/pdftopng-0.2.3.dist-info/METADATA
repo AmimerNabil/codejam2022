@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: pdftopng
+Version: 0.2.3
+Summary: A PDF to PNG conversion library.
+Home-page: https://github.com/vinayak-mehta/pdftopng
+Author: Vinayak Mehta
+Author-email: vmehta94@gmail.com
+License: GPL-2.0
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Click (>=7.0)
+Provides-Extra: dev
+Requires-Dist: Pillow (>=8.2.0) ; extra == 'dev'
+Requires-Dist: pytest (>=6.2.3) ; extra == 'dev'
+Requires-Dist: pytest-cov (>=2.11.1) ; extra == 'dev'
+Requires-Dist: Click (>=7.0) ; extra == 'dev'
+
+# pdftopng
+
+A PDF to PNG conversion library (based on `pdftoppm` from `poppler`)
+
+## Installation
+
+```
+$ pip install pdftopng
+```
+
+## Usage
+
+```
+from pdftopng import pdftopng
+
+pdftopng.convert(pdf_path="foo.pdf", png_path="foo.png")
+```
+
+```
+$ pdftopng /path/to/pdf /path/to/png
+```
+
+## Testing
+
+First, set up the development environment using:
+
+```
+$ pip install -e ".[dev]"
+```
+
+And then:
+
+```
+$ pytest --verbose --cov-report term --cov-report xml --cov=pdftopng tests/test_*.py
+```
+
+## Versioning
+
+`pdftopng` uses [Semantic Versioning](https://semver.org/). For the available versions, see the tags on this repository.
+
+## License
+
+This project is licensed under GPLv2, see the [LICENSE](https://raw.githubusercontent.com/vinayak-mehta/pdftopng/master/LICENSE) file for details.
+
+

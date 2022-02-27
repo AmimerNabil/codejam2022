@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: poppler-utils
+Version: 0.1.0
+Summary: Precompiled command-line utilities (based on Poppler) for manipulating PDF files and converting them to other formats.
+Home-page: https://github.com/vinayak-mehta/poppler-utils
+Author: Vinayak Mehta
+Author-email: vmehta94@gmail.com
+License: GPL-2.0
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: Click (>=7.0)
+Provides-Extra: dev
+Requires-Dist: Click (>=7.0) ; extra == 'dev'
+Requires-Dist: Sphinx (>=2.2.1) ; extra == 'dev'
+
+# poppler-utils
+
+Precompiled command-line utilities (based on Poppler) for manipulating PDF files and converting them to other formats.
+
+
