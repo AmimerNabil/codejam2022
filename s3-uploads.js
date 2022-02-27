@@ -27,7 +27,7 @@ const upload = multer({
 });
 
 
-app.use(express.static('public/'));
+app.use(express.static('/'));
 app.post('/upload', upload.array('avatar'), (req,res) =>{
     console.log(res.json({status : 'OK', uploaded: req.files.length}));
     getAllObjectsFromS3Bucket("codejam2022");
@@ -76,8 +76,6 @@ async function getAllObjectsFromS3Bucket(bucket) {
                 }
             )         
         });
-
-
 
         isTruncated = response.IsTruncated
         if (isTruncated) {
